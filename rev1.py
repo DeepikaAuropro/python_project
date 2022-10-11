@@ -50,6 +50,51 @@ output:
 name  :  tim
 b_day  :  1990-03-10
 job  :  Software Engineer
+    
+#------------------------------------------------------------
+
+employees = [{
+  "name": "Tina",
+  "age": 30,
+  "birthday": "1990-03-10",
+  "job": "DevOps Engineer",
+  "address": {
+    "city": "New York",
+    "country": "USA"
+  }
+},
+{
+  "name": "Tim",
+  "age": 35,
+  "birthday": "1985-02-21",
+  "job": "Developer",
+  "address": {
+    "city": "Sydney",
+    "country": "Australia"
+  }
+}]
+for employee in employees:
+    print("name:" , employee['name'])
+    print("job:" , employee['job'])
+    print("city:" , employee['address']['city'])
+    print("\n")
+
+print(employees[1]["address"]['country'])
+
+output:
+name: Tina
+job: DevOps Engineer
+city: New York
+
+
+name: Tim
+job: Developer
+city: Sydney
+
+
+Australia
+
+#-------------------------------------------------------------------
 
 
 
