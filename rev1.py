@@ -3,6 +3,14 @@ for i in my_list:
     if(i >=10):
         print(i)
 
+output:
+10
+13
+22
+35
+52
+83
+
 #-------------------------------------------
 
 my_list = [1,2,4,5,6,8,10,13,22,35,52,83]
@@ -12,6 +20,8 @@ for i in my_list:
         new_list.append(i)
 print(new_list)
 
+output:[10, 13, 22, 35, 52, 83]
+
 #.............................................
 
 a = int(input("enter a number"))
@@ -20,6 +30,14 @@ for i in my_list:
     if(i >= a):
         print(i)
 
+output:
+enter a number13
+13
+22
+35
+52
+83
+
 #---------------------------------------------------------------------------------
 
 employee = {"name":"tim","age":30,"b_day":"1990-03-10","job":"devops engineer"}
@@ -27,6 +45,11 @@ employee.pop('age')
 employee["job"] = "Software Engineer"
 for key, value in employee.items():
     print(key, ' : ', value)
+
+output:
+name  :  tim
+b_day  :  1990-03-10
+job  :  Software Engineer
 
 
 
