@@ -66,7 +66,7 @@ for num in Num_list:
 
 print(f'The even numbers in a list are:  {even_list}')
     
-    
+   
 output:
     Enter numbers separated by space 1 3 4 6 8 9 11 14 15 18 22 33
     ['1', '3', '4', '6', '8', '9', '11', '14', '15', '18', '22', '33']
