@@ -1,0 +1,102 @@
+count=0
+def add(x, y):
+    return x + y
+def subtract(x, y):
+    return x - y
+def multiply(x, y):
+    return x * y
+def divide(x, y):
+    if y!=0:
+      return x / y
+    else:
+        print("Division is not possible")
+while True:
+    print("Select operation.")
+    print("1.Add      : + ")
+    print("2.Subtract : - ")
+    print("3.Multiply : * ")
+    print("4.Divide   : / ")
+    print("5.Exit")
+
+    choice = input("Enter Choice : ")
+    if choice in ('1', '2', '3', '4','5','Exit','exit'):
+        if choice == '5' or choice == 'Exit' or choice == 'exit':
+            print("Thankyou for using calculator")
+            break
+
+        value1 =input("Enter First Number = ")
+        value2 = input("Enter Second Number = ")
+        count=count+1
+
+        try:
+            num1=float(value1)
+            num2=float(value2)
+
+            if choice == '1':
+              print(num1, "+", num2, "=", add(num1, num2))
+            elif choice == '2':
+              print(num1, "-", num2, "=", subtract(num1, num2))
+            elif choice == '3':
+              print(num1, "*", num2, "=", multiply(num1, num2))
+            elif choice == '4':
+              print(num1, "/", num2, "=", divide(num1, num2))
+
+        except ValueError:
+              print("please enter only numbers")
+print(f"{count} calculations are performed")
+
+
+Output:
+
+Select operation.
+1.Add      : + 
+2.Subtract : - 
+3.Multiply : * 
+4.Divide   : / 
+5.Exit
+Enter Choice : 2
+Enter First Number = 5.6
+Enter Second Number = 3
+5.6 - 3.0 = 2.5999999999999996
+Select operation.
+1.Add      : + 
+2.Subtract : - 
+3.Multiply : * 
+4.Divide   : / 
+5.Exit
+Enter Choice : 3
+Enter First Number = 4
+Enter Second Number = 5
+4.0 * 5.0 = 20.0
+Select operation.
+1.Add      : + 
+2.Subtract : - 
+3.Multiply : * 
+4.Divide   : / 
+5.Exit
+Enter Choice : 4
+Enter First Number = 3
+Enter Second Number = 0
+Division is not possible
+3.0 / 0.0 = None
+Select operation.
+1.Add      : + 
+2.Subtract : - 
+3.Multiply : * 
+4.Divide   : / 
+5.Exit
+Enter Choice : 1
+Enter First Number = e
+Enter Second Number = 4
+please enter only numbers
+Select operation.
+1.Add      : + 
+2.Subtract : - 
+3.Multiply : * 
+4.Divide   : / 
+5.Exit
+Enter Choice : 5
+Thankyou for using calculator
+4 calculations are performed
+
+
