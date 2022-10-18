@@ -1,0 +1,61 @@
+from datetime import datetime
+from datetime import date
+import time
+
+today = date.today()
+
+def user_bday():
+    year = int(input("Enter your year of birth[YY]"))
+    month = int(input("Enter your birth month[MM]"))
+    day = int(input("Enter your birth date[DD]"))
+    print(f"Your date of birth is {day}-{month}-{year}")
+    birthday = datetime(year, month, day)
+    return birthday
+
+def calculate_dates(birthday):
+    today == date.fromtimestamp(time.time())
+    birthday = date(today.year, birthday.month, birthday.day)
+    if birthday < today:
+        birthday = birthday.replace(year=today.year + 1)
+        print("Your birthday comes next year again")
+        return birthday
+    else:
+        return birthday
+
+while True:
+    try:
+        Bdy = user_bday()
+        t = calculate_dates(Bdy)
+        time_to_birthday = abs(t - today)
+        days = time_to_birthday.days
+        current_time = datetime.now()
+        h = current_time.hour
+        m = current_time.minute
+        s = current_time.second
+        hours = int((int(days) - 1) * 24)+(24-h)
+        mins = int((hours-1)*60)-m
+        secs = int((mins-1)*60)-s
+        print(f'Time to your Birthday is {days} days / {hours} hours / {mins} minutes / {secs} seconds!!!')
+    except:
+        print("invalid input, Enter only numbers")
+    user_input = input("do you want to continue Y/exit")
+    if(user_input) == 'exit':
+        break
+        
+        
+Output:
+
+Enter your year of birth[YY]2000
+Enter your birth month[MM]10
+Enter your birth date[DD]20
+Your date of birth is 20-10-2000
+Time to your Birthday is 2 days / 32 hours / 1839 minutes / 110258 seconds!!!
+do you want to continue Y/exitY
+Enter your year of birth[YY]2000
+Enter your birth month[MM]10
+Enter your birth date[DD]20
+Your date of birth is 20-10-2000
+Time to your Birthday is 2 days / 32 hours / 1838 minutes / 110194 seconds!!!
+do you want to continue Y/exitexit
+
+
